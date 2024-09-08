@@ -9,6 +9,7 @@
 #define SLinkedList_h
 
 #include "ListType.h"
+#include <assert.h>
 using namespace std;
 
 template <class Type>
@@ -76,11 +77,20 @@ void SinglyLinkedList<Type>::insertLast(const Type& newItem){
     
     //Create a new node
     NodeType<Type>* newNode = new NodeType<Type>;
-    
+    newNode->data = newItem;
+    newNode->next = NULL;
+
+    //Traverse the list
+    NodeType<Type>* current = this->head; //pointer to traverse the list
+    while (current->next != NULL) {
+        current = current->next;
+    }
+
+    //Update the Linked List tail to point at the new Node
+    current->next = newNode;
 
     //update count
     this->count += 1;
-    
 }
 
 template <class Type>
