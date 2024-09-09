@@ -105,7 +105,7 @@ void SinglyLinkedList<Type>::deleteNode(const Type& deleteItem){
     if(current->data == deleteItem){
         this->head = current->next;
     } else {
-        while (current->next != NULL) {
+        while (current != NULL) { //Changed this to check if current is NULL, otherwise it'll skip the last one
             //is current data item to be deleted?
             if(current->data == deleteItem){
                 prevNode->next = current->next;
