@@ -3,6 +3,7 @@
 //  SinglyLinkedList.h
 //
 //  Created by Ariel Katz on 2/7/23.
+//  Modified by Eisig Liang on 9/9/24
 //
 
 #ifndef SLinkedList_h

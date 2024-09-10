@@ -3,6 +3,7 @@
 //  SinglyLinkedList
 //
 //  Created by Ariel Katz on 2/7/23.
+//  Modified by Eisig Liang on 9/10/24
 //
 
 #include <iostream>
@@ -38,6 +39,12 @@ int main() {
     
     //Test deleting last item
     list.deleteNode(2);
+    list.print();
+    cout << endl;
+
+    //Custom test cases
+    cout << list.search(11) << endl;
+    list.destroyList();
     list.print();
     cout << endl;
     
